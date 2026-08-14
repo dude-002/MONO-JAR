@@ -12,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             text-align: center;
             padding: 20px;
@@ -66,22 +66,71 @@
         .hint-box strong {
             color: #ffffff;
         }
+        /* Блок соцмереж */
+        .socials {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #2c2c2e;
+            display: flex;
+            gap: 10px;
+        }
+        .social-btn {
+            flex: 1;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s, transform 0.1s;
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+        
+        /* Колір Instagram (Фірмовий градієнт) */
+        .social-btn.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        /* Колір Threads (Офіційний чорний з білим кантом) */
+        .social-btn.threads {
+            background-color: #000000;
+            border: 1px solid #3a3a3c;
+        }
+
+        .social-btn:active {
+            opacity: 0.8;
+            transform: scale(0.96);
+        }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>Щоб подякувати без папірців, натисніть кнопку нижче</h2>
-        <p class="description">Дякую! 🤍</p>
+        <h2>Дякую! 🤍</h2>
+        <p class="description">Щоб залишити чайові без папірців, натисніть кнопку нижче</p>
         
         <form action="https://send.monobank.ua/jar/36hcGtFoDK" method="GET">
             <input type="hidden" name="noapp" value="1">
-            <button type="submit" class="btn"><strong>ТИЦЬ СЮДИ</strong></button>
+            <button type="submit" class="btn"><strong>⇨ ТИЦЬ ⇦</strong></button>
         </form>
 
         <!-- Окремий блок-підказка -->
         <div class="hint-box">
-            💡 Якщо у Вас є додаток Mono - натисніть <strong>«Скасувати»</strong> у спливаючому вікні..
+            💡 Якщо у Вас встановлений додаток Mono - натисніть <strong>«Скасувати»</strong> у спливаючому вікні.
+        </div>
+
+        <!-- Посилання на соцмережі з брендовими кольорами -->
+        <div class="socials">
+            <a href="https://instagram.com/pimkicoffee" target="_blank" class="social-btn instagram">
+                Instagram
+            </a>
+            <a href="https://threads.net/@pimkicoffee" target="_blank" class="social-btn threads">
+                Threads
+            </a>
         </div>
     </div>
 
