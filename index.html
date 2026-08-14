@@ -90,12 +90,10 @@
             box-sizing: border-box;
         }
         
-        /* Колір Instagram (Фірмовий градієнт) */
         .social-btn.instagram {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
 
-        /* Колір Threads (Офіційний чорний з білим кантом) */
         .social-btn.threads {
             background-color: #000000;
             border: 1px solid #3a3a3c;
@@ -113,17 +111,12 @@
         <h2>Дякую! 🤍</h2>
         <p class="description">Щоб залишити чайові без папірців, натисніть кнопку нижче</p>
         
-        <form action="https://send.monobank.ua/jar/36hcGtFoDK" method="GET">
-            <input type="hidden" name="noapp" value="1">
-            <button type="submit" class="btn"><strong>⇨ ТИЦЬ ⇦</strong></button>
-        </form>
+        <button id="payBtn" class="btn"><strong>⇨ ТИЦЬ ⇦</strong></button>
 
-        <!-- Окремий блок-підказка -->
         <div class="hint-box">
             💡 Якщо у Вас встановлений додаток Mono - натисніть <strong>«Скасувати»</strong> у спливаючому вікні.
         </div>
 
-        <!-- Посилання на соцмережі з брендовими кольорами -->
         <div class="socials">
             <a href="https://instagram.com/pimkicoffee" target="_blank" class="social-btn instagram">
                 Instagram
@@ -133,6 +126,15 @@
             </a>
         </div>
     </div>
+
+    <script>
+        document.getElementById('payBtn').addEventListener('click', function() {
+            // Маленька затримка робить так, що iOS не розпізнає це як "прямий жест" для запуску Universal Links
+            setTimeout(function() {
+                window.location.href = "https://send.monobank.ua/jar/36hcGtFoDK?noapp=1";
+            }, 100);
+        });
+    </script>
 
 </body>
 </html>
