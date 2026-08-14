@@ -31,7 +31,7 @@
             font-size: 22px;
             font-weight: 700;
         }
-        p {
+        .description {
             font-size: 14px;
             color: #8e8e93;
             margin-bottom: 24px;
@@ -53,19 +53,36 @@
         .btn:active {
             transform: scale(0.96);
         }
+        /* Стильний блок підказки */
+        .hint-box {
+            margin-top: 20px;
+            padding: 12px 14px;
+            background-color: #2c2c2e;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #d1d1d6;
+            line-height: 1.4;
+        }
+        .hint-box strong {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>Залишити чайові без папірців</h2>
-        <p>Просто нажміть на кнопку нижче. Дякую!</p>
+        <h2>Щоб подякувати без папірців, натисніть кнопку нижче</h2>
+        <p class="description">Дякую! 🤍</p>
         
-        <!-- Форма замість звичайного посилання обходить Universal Links в iOS -->
         <form action="https://send.monobank.ua/jar/36hcGtFoDK" method="GET">
             <input type="hidden" name="noapp" value="1">
-            <button type="submit" class="btn">ТИЦЬ ♡</button>
+            <button type="submit" class="btn"><strong>ТИЦЬ СЮДИ</strong></button>
         </form>
+
+        <!-- Окремий блок-підказка -->
+        <div class="hint-box">
+            💡 Якщо у Вас є додаток Mono - натисніть <strong>«Скасувати»</strong> у спливаючому вікні..
+        </div>
     </div>
 
 </body>
