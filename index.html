@@ -41,19 +41,19 @@
             background-color: #ffffff;
             color: #000000;
             padding: 16px 20px;
-            border: none;
             border-radius: 14px;
             width: 100%;
             font-weight: 700;
             font-size: 16px;
-            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            box-sizing: border-box;
             transition: transform 0.1s ease;
             -webkit-tap-highlight-color: transparent;
         }
         .btn:active {
             transform: scale(0.96);
         }
-        /* Стильний блок підказки */
         .hint-box {
             margin-top: 20px;
             padding: 12px 14px;
@@ -66,7 +66,6 @@
         .hint-box strong {
             color: #ffffff;
         }
-        /* Блок соцмереж */
         .socials {
             margin-top: 20px;
             padding-top: 20px;
@@ -89,16 +88,13 @@
             -webkit-tap-highlight-color: transparent;
             box-sizing: border-box;
         }
-        
         .social-btn.instagram {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
-
         .social-btn.threads {
             background-color: #000000;
             border: 1px solid #3a3a3c;
         }
-
         .social-btn:active {
             opacity: 0.8;
             transform: scale(0.96);
@@ -111,10 +107,13 @@
         <h2>Дякую! 🤍</h2>
         <p class="description">Щоб залишити чайові без папірців, натисніть кнопку нижче</p>
         
-        <button id="payBtn" class="btn"><strong>⇨ ТИЦЬ ⇦</strong></button>
+        <!-- Відкриття у новій вкладці для пріоритету Web Apple Pay -->
+        <a href="https://send.monobank.ua/jar/36hcGtFoDK?noapp=1" target="_blank" rel="opener" class="btn">
+            <strong>⇨ ТИЦЬ ⇦</strong>
+        </a>
 
         <div class="hint-box">
-            💡 Якщо у Вас встановлений додаток Mono - натисніть <strong>«Скасувати»</strong> у спливаючому вікні.
+            💡 Для оплати через <strong>Apple Pay</strong> будь-якою карткою — натисніть <strong>«Скасувати»</strong>, якщо з'явиться вікно.
         </div>
 
         <div class="socials">
@@ -126,15 +125,6 @@
             </a>
         </div>
     </div>
-
-    <script>
-        document.getElementById('payBtn').addEventListener('click', function() {
-            // Маленька затримка робить так, що iOS не розпізнає це як "прямий жест" для запуску Universal Links
-            setTimeout(function() {
-                window.location.href = "https://send.monobank.ua/jar/36hcGtFoDK?noapp=1";
-            }, 100);
-        });
-    </script>
 
 </body>
 </html>
