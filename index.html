@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переход к оплате...</title>
+    <!-- Мгновенный HTML-редирект для браузера -->
+    <meta http-equiv="refresh" content="0; url=https://send.monobank.ua/jar/36hcGtFoDK?noapp=1">
+</head>
+<body style="background-color: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center;">
+
+    <div style="padding: 20px;">
+        <p style="font-size: 18px; margin-bottom: 20px;">Переходим на страницу оплаты в браузере...</p>
+        <p style="font-size: 14px; opacity: 0.7;">Если переход не произошел автоматически:</p>
+        <a href="https://send.monobank.ua/jar/36hcGtFoDK?noapp=1" style="background: #ffffff; color: #000000; padding: 12px 24px; text-decoration: none; border-radius: 12px; display: inline-block; font-weight: bold; margin-top: 10px;">Открыть Банку</a>
+    </div>
+
+    <!-- JS-редирект с задержкой 50мс для обхода защиты мобильной ОС -->
+    <script>
+        setTimeout(function() {
+            window.location.replace("https://send.monobank.ua/jar/36hcGtFoDK?noapp=1");
+        }, 50);
+    </script>
+</body>
+</html>
